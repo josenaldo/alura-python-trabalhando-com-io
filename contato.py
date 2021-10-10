@@ -1,7 +1,7 @@
 class Contato:
 
-    def __init__(self, id, nome, email):
-        self.__id = id
+    def __init__(self, id_value, nome, email):
+        self.__id = id_value
         self.__nome = nome
         self.__email = email
 

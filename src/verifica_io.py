@@ -1,4 +1,4 @@
-arquivo = open('dados/contatos-escrita.csv', encoding='latin_1', mode='w+')
+arquivo = open('../dados/contatos-escrita.csv', encoding='latin_1', mode='w+')
 
 print(type(arquivo.buffer))
 

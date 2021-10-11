@@ -5,6 +5,16 @@ class Contato:
         self.__nome = nome
         self.__email = email
 
+    def __repr__(self):
+        return f"Contato(id={self.id}, nome='{self.nome}', email='{self.email}')"
+
+    def __str__(self):
+        return f"{self.id} - {self.nome} - {self.email}"
+
+    def __eq__(self, other):
+
+        return self.id == other.id and self.nome == other.nome and self.email == other.email
+
     @property
     def id(self):
         return self.__id

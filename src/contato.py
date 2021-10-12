@@ -1,7 +1,9 @@
+import json
+
 class Contato:
 
-    def __init__(self, id_value, nome, email):
-        self.__id = id_value
+    def __init__(self, id, nome, email):
+        self.__id = id
         self.__nome = nome
         self.__email = email
 
@@ -12,7 +14,6 @@ class Contato:
         return f"{self.id} - {self.nome} - {self.email}"
 
     def __eq__(self, other):
-
         return self.id == other.id and self.nome == other.nome and self.email == other.email
 
     @property
@@ -38,3 +39,15 @@ class Contato:
     @email.setter
     def email(self, value):
         self.__email = value
+    
+    @property
+    def sobrenome(self):
+        return self.__sobrenome
+    
+    @sobrenome.setter
+    def sobrenome(self, value):
+        self.__sobrenome = value
+    
+    @sobrenome.deleter
+    def sobrenome(self):
+        del self.__sobrenome
